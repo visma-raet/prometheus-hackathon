@@ -1,0 +1,9 @@
+groups:
+  - name: DemoAlerts
+    rules:
+      - alert: InstanceDown 
+        expr: up{job="services"} < 1 
+        for: 5m
+      - alert: InstanceDown 
+        expr: up{job="servicesHTTPS"} < 1 
+        for: 5m
