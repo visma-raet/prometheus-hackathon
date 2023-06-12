@@ -23,7 +23,7 @@ services:
       - SERVER=sd-t-promsql01.raet.local
       - USERNAME=Prometheus_Hack
       - PORT=51471
-      - PASSWORD=Prometheus_Hack
+      - PASSWORD=xxx
       - DEBUG=db
 
 volumes:
