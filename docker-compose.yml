@@ -15,8 +15,16 @@ services:
     volumes:
       - ./grafana/provisioning/datasources:/etc/grafana/provisioning/datasources
       - grafana-data:/var/lib/grafana
-
-
+  mssqlexporter:
+    image: awaragi/prometheus-mssql-exporter
+    ports:
+      - 4000:4000
+    environment:
+      - SERVER=sd-t-promsql01.raet.local
+      - USERNAME=Prometheus_Hack
+      - PORT=51471
+      - PASSWORD=Prometheus_Hack
+      - DEBUG=db
 
 volumes:
   prometheus-data:
