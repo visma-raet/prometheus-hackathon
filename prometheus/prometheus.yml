@@ -17,3 +17,14 @@ scrape_configs:
     static_configs:
       - targets:
           - 'prometheus.demo.do.prometheus.io'
+  - job_name: sqlExporters
+    metrics_path: /metrics
+    static_configs:
+      - targets:
+          - 'mssqlexporter:4000'
+  - job_name: WindowsExporter
+    metrics_path: /metrics
+    static_configs:
+      - targets:
+          - '172.24.18.6:9182'
+
